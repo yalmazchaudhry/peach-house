@@ -38,41 +38,41 @@ function ImageSlider({ IMAGES }: Props) {
 
   return (
     <>
-      <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-x-8 px-6 ">
+      <div className="flex gap-x-5 px-5">
         {dividedImages &&
           dividedImages.map((images, colIndex) => (
-            <div
-              className={`grid h-fits gap-x-8 images ${colIndex % 2 === 0 ? 'animate-marqueeDown' : 'animate-marqueeUp'}`}
-              key={colIndex}
-            >
-              {images.map((image, imgIndex) => (
-                <img
-                  className="pt-5"
-                  src={image}
-                  key={imgIndex}
-                  alt={`image-${imgIndex}`}
-                  loading="lazy"
-                />
-              ))}
+            <div className="flex flex-col">
+              <div
+                className={`images ${colIndex % 2 === 0 ? 'animate-marqueeDown' : 'animate-marqueeUp'}`}
+                key={colIndex}
+              >
+                {images.map((image, imgIndex) => (
+                  <img
+                    className="pt-5"
+                    src={image}
+                    key={imgIndex}
+                    alt={`image-${imgIndex}`}
+                    loading="lazy"
+                  />
+                ))}
+              </div>
+              <div
+                aria-hidden={true}
+                className={`images ${colIndex % 2 === 0 ? 'animate-marqueeDown' : 'animate-marqueeUp'}`}
+                key={colIndex}
+              >
+                {images.map((image, imgIndex) => (
+                  <img
+                    className="pt-5"
+                    src={image}
+                    key={imgIndex}
+                    alt={`image-${imgIndex}`}
+                    loading="lazy"
+                  />
+                ))}
+              </div>
             </div>
           ))}
-        {dividedImages.map((images, colIndex) => (
-          <div
-            aria-hidden={true}
-            className={`grid gap-x-8 h-fits images ${colIndex === 0 ? '' : ''} ${colIndex === 4 ? '' : ''} ${colIndex % 2 === 0 ? 'animate-marqueeDown' : 'animate-marqueeUp'}`}
-            key={colIndex}
-          >
-            {images.map((image, imgIndex) => (
-              <img
-                className="pt-5"
-                src={image}
-                key={imgIndex}
-                alt={`image-${imgIndex}`}
-                loading="lazy"
-              />
-            ))}
-          </div>
-        ))}
       </div>
     </>
   );
