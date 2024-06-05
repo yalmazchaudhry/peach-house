@@ -29,7 +29,6 @@ function App() {
     'https://www.peachhouse.co/wp-content/uploads/2022/09/MV5BZDk4Nzg5ZjQtZDNlMC00ZjIwLWE2NmItNjJhMmIzYTk0ZmNlXkEyXkFqcGdeQXVyOTEwNTkyNjE@._V1_-600x850.jpg',
     'https://www.peachhouse.co/wp-content/uploads/2022/09/V1_PPposter_fringe_underwire_flare-600x337.png',
     'https://www.peachhouse.co/wp-content/uploads/2020/01/Management_2000px49-600x600.jpg',
-    'https://www.peachhouse.co/wp-content/uploads/2022/03/Sam-homepage--600x600.jpg',
     'https://www.peachhouse.co/wp-content/uploads/2021/04/Instagram_Squares28.jpg',
     'https://www.peachhouse.co/wp-content/uploads/2020/01/Homepage_Assets_2000px2-600x762.jpg',
   ];
